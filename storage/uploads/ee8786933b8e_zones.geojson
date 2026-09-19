@@ -1,0 +1,1 @@
+{"type": "FeatureCollection", "features": [{"type": "Feature", "geometry": {"type": "Point", "coordinates": [79.811, 21.431]}, "properties": {"name": "Zone Alpha"}}, {"type": "Feature", "geometry": {"type": "Point", "coordinates": [79.821, 21.432]}, "properties": {"name": "Zone Beta"}}]}

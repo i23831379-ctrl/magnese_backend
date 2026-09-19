@@ -1,0 +1,1 @@
+"""Manganese-specific prediction components."""

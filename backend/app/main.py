@@ -2,16 +2,22 @@ from fastapi import FastAPI
 from fastapi.middleware.cors import CORSMiddleware
 from .routes import maps, manganese, targets
 
-app = FastAPI(title="MANGANEX AI API", version="1.0.0", description="AI-assisted manganese prospectivity demo API")
+app = FastAPI(
+    title="MANGANEX AI API", 
+    version="1.0.0", 
+    description="AI-assisted manganese prospectivity demo API"
+)
 
+# CORS middleware MUST be added before any routes are registered
 app.add_middleware(
     CORSMiddleware,
     allow_origins=[
-    "http://localhost:5173",
-    "http://127.0.0.1:5173",
-    "http://localhost:5175",
-    "http://127.0.0.1:5175",
-],
+        "https://magnex-ai.netlify.app",
+        "http://localhost:5173",
+        "http://127.0.0.1:5173",
+        "http://localhost:5175",
+        "http://127.0.0.1:5175",
+    ],
     allow_credentials=True,
     allow_methods=["*"],
     allow_headers=["*"],
